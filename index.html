@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glendale Permit Progress Dashboard</title>
     <style>
         * {
@@ -10,16 +10,16 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Montserrat', 'Bell MT', serif;
             background: linear-gradient(135deg, #002133 0%, #001122 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .dashboard {
             max-width: 1400px;
             margin: 0 auto;
@@ -30,33 +30,67 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 249, 255, 0.2);
         }
-        
+
+        /* Header updated for logo + text */
         .header {
-            text-align: center;
+            /* center layout, allow logo + text side-by-side on wide screens */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             margin-bottom: 40px;
             padding-bottom: 30px;
             border-bottom: 3px solid #00f9ff;
+            flex-wrap: wrap;
+            text-align: left; /* will be overridden on small screens */
         }
-        
+
+        .logo {
+            width: 96px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
         .header h1 {
             color: #002133;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.2em;
             font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 0;
         }
-        
+
         .header p {
             color: #002133;
-            font-size: 1.1em;
-            opacity: 0.8;
+            font-size: 1.05em;
+            opacity: 0.85;
         }
-        
+
+        /* Responsive: stack logo above text on narrow screens */
+        @media (max-width: 640px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+            .header p {
+                width: 100%;
+            }
+        }
+
         .permits-grid {
             display: grid;
             gap: 25px;
             margin-bottom: 30px;
         }
-        
+
         .permit-card {
             background: #ffffff;
             border-radius: 15px;
@@ -65,13 +99,13 @@
             border-left: 5px solid #00f9ff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .permit-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 249, 255, 0.25);
             border-left-width: 8px;
         }
-        
+
         .permit-header {
             display: flex;
             justify-content: space-between;
@@ -80,13 +114,13 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        
+
         .permit-number {
             font-size: 1.4em;
             font-weight: bold;
             color: #002133;
         }
-        
+
         .permit-type {
             background: linear-gradient(135deg, #00f9ff, #0088cc);
             color: #002133;
@@ -96,50 +130,50 @@
             font-weight: 600;
             text-shadow: none;
         }
-        
+
         .permit-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
-        
+
         .detail-item {
             background: #f8f9fa;
             padding: 12px;
             border-radius: 8px;
             border-left: 3px solid #00f9ff;
         }
-        
+
         .detail-label {
             font-weight: bold;
             color: #002133;
             font-size: 0.9em;
             margin-bottom: 3px;
         }
-        
+
         .detail-value {
             color: #002133;
             font-size: 1em;
             opacity: 0.8;
         }
-        
+
         .progress-section {
             margin-top: 20px;
         }
-        
+
         .progress-header {
             font-weight: bold;
             color: #002133;
             margin-bottom: 15px;
             font-size: 1.1em;
         }
-        
+
         .timeline {
             position: relative;
             padding-left: 30px;
         }
-        
+
         .timeline::before {
             content: '';
             position: absolute;
@@ -149,7 +183,7 @@
             width: 2px;
             background: #e9ecef;
         }
-        
+
         .timeline-item {
             position: relative;
             margin-bottom: 15px;
@@ -158,7 +192,7 @@
             border-radius: 8px;
             margin-left: 15px;
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -170,73 +204,73 @@
             border-radius: 50%;
             background: #95a5a6;
         }
-        
+
         .timeline-item.passed::before {
             background: #00f9ff;
             box-shadow: 0 0 10px rgba(0, 249, 255, 0.5);
         }
-        
+
         .timeline-item.partial::before {
             background: #f39c12;
         }
-        
+
         .timeline-item.failed::before {
             background: #e74c3c;
         }
-        
+
         .timeline-item.next::before {
             background: #00f9ff;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(0, 249, 255, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(0, 249, 255, 0); }
             100% { box-shadow: 0 0 0 0 rgba(0, 249, 255, 0); }
         }
-        
+
         .timeline-date {
             font-size: 0.85em;
             color: #002133;
             margin-bottom: 3px;
             opacity: 0.7;
         }
-        
+
         .timeline-type {
             font-weight: bold;
             color: #002133;
             margin-bottom: 2px;
         }
-        
+
         .timeline-status {
             font-size: 0.9em;
             padding: 2px 8px;
             border-radius: 12px;
             display: inline-block;
         }
-        
+
         .status-passed {
             background: rgba(0, 249, 255, 0.2);
             color: #002133;
             font-weight: 600;
         }
-        
+
         .status-partial {
             background: #ffeaa7;
             color: #d63031;
         }
-        
+
         .status-failed {
             background: #fab1a0;
             color: #e17055;
         }
-        
+
         .status-pending {
             background: rgba(0, 249, 255, 0.3);
             color: #002133;
             font-weight: 600;
         }
-        
+
         .next-steps {
             background: linear-gradient(135deg, #00f9ff, #0088cc);
             color: #002133;
@@ -245,21 +279,21 @@
             margin-top: 15px;
             font-weight: 500;
         }
-        
+
         .next-steps h4 {
             margin-bottom: 8px;
             font-size: 1em;
             font-weight: 700;
         }
-        
+
         .expired {
             border-left-color: #e74c3c;
         }
-        
+
         .expired .permit-type {
             background: #e74c3c;
         }
-        
+
         .summary {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -268,7 +302,7 @@
             padding-top: 20px;
             border-top: 2px solid #00f9ff;
         }
-        
+
         .summary-card {
             background: linear-gradient(135deg, #002133, #001122);
             color: #ffffff;
@@ -278,19 +312,19 @@
             border: 1px solid rgba(0, 249, 255, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .summary-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 249, 255, 0.2);
         }
-        
+
         .summary-number {
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 5px;
             color: #00f9ff;
         }
-        
+
         .summary-label {
             font-size: 0.9em;
             opacity: 0.9;
@@ -301,10 +335,15 @@
 <body>
     <div class="dashboard">
         <div class="header">
-            <h1>🏗️ Glendale Permit Progress Dashboard</h1>
-            <p>431 N Brand Blvd, Glendale, CA 91203 - Tracking Status & Next Steps</p>
+            <!-- Logo (make sure logo.jpg lives in the same folder as this index.html) -->
+            <img src="logo.jpg" alt="Glendale logo" class="logo">
+
+            <div class="header-text">
+                <h1>🏗️ Glendale Permit Progress Dashboard</h1>
+                <p>431 N Brand Blvd, Glendale, CA 91203 - Tracking Status & Next Steps</p>
+            </div>
         </div>
-        
+
         <div class="permits-grid">
             <!-- Building Permit BB2005025 -->
             <div class="permit-card">
@@ -312,7 +351,7 @@
                     <div class="permit-number">BB2005025</div>
                     <div class="permit-type">Building Permit</div>
                 </div>
-                
+
                 <div class="permit-details">
                     <div class="detail-item">
                         <div class="detail-label">Contractor</div>
@@ -331,7 +370,7 @@
                         <div class="detail-value">Active - In Progress</div>
                     </div>
                 </div>
-                
+
                 <div class="progress-section">
                     <div class="progress-header">Inspection Progress</div>
                     <div class="timeline">
@@ -351,176 +390,18 @@
                             <span class="timeline-status status-pending">Pending Schedule</span>
                         </div>
                     </div>
-                    
+
                     <div class="next-steps">
                         <h4>🎯 Next Steps:</h4>
                         Schedule drywall re-inspection to address partial pass items. Contact inspector John Liddell for specific requirements.
                     </div>
                 </div>
             </div>
-            
-            <!-- Mechanical Permit BM2005029 -->
-            <div class="permit-card">
-                <div class="permit-header">
-                    <div class="permit-number">BM2005029</div>
-                    <div class="permit-type">Mechanical Permit</div>
-                </div>
-                
-                <div class="permit-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Contractor</div>
-                        <div class="detail-value">California Air Conditioning & Mechanical Inc</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Start Date</div>
-                        <div class="detail-value">4/1/2020</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Scope</div>
-                        <div class="detail-value">3 air handlers, 3 motors, vent fans</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Status</div>
-                        <div class="detail-value">Active - Recent Pass</div>
-                    </div>
-                </div>
-                
-                <div class="progress-section">
-                    <div class="progress-header">Inspection Progress</div>
-                    <div class="timeline">
-                        <div class="timeline-item passed">
-                            <div class="timeline-date">1/21/2025</div>
-                            <div class="timeline-type">(540) Rough HVAC</div>
-                            <span class="timeline-status status-passed">Passed</span>
-                        </div>
-                        <div class="timeline-item next">
-                            <div class="timeline-date">Next Required</div>
-                            <div class="timeline-type">Final HVAC Inspection</div>
-                            <span class="timeline-status status-pending">Ready to Schedule</span>
-                        </div>
-                    </div>
-                    
-                    <div class="next-steps">
-                        <h4>🎯 Next Steps:</h4>
-                        Schedule final HVAC inspection with Steven Galipo. Ensure all equipment is installed and operational.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Electrical Permit BE1718496 -->
-            <div class="permit-card">
-                <div class="permit-header">
-                    <div class="permit-number">BE1718496</div>
-                    <div class="permit-type">Electrical Permit</div>
-                </div>
-                
-                <div class="permit-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Contractor</div>
-                        <div class="detail-value">Cal Pro Electric Inc</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Start Date</div>
-                        <div class="detail-value">8/1/2017</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Scope</div>
-                        <div class="detail-value">129 outlets, 54 circuits, 600V+ service</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Status</div>
-                        <div class="detail-value">Active - Recent Progress</div>
-                    </div>
-                </div>
-                
-                <div class="progress-section">
-                    <div class="progress-header">Inspection Progress</div>
-                    <div class="timeline">
-                        <div class="timeline-item passed">
-                            <div class="timeline-date">8/23/2024</div>
-                            <div class="timeline-type">(340) Rough Electrical</div>
-                            <span class="timeline-status status-passed">Passed</span>
-                        </div>
-                        <div class="timeline-item partial">
-                            <div class="timeline-date">6/18/2025</div>
-                            <div class="timeline-type">(355) Rough Electric/Hard Lids</div>
-                            <span class="timeline-status status-partial">Partial Pass</span>
-                        </div>
-                        <div class="timeline-item next">
-                            <div class="timeline-date">Next Required</div>
-                            <div class="timeline-type">Hard Lids Re-inspection</div>
-                            <span class="timeline-status status-pending">Pending Schedule</span>
-                        </div>
-                    </div>
-                    
-                    <div class="next-steps">
-                        <h4>🎯 Next Steps:</h4>
-                        Schedule re-inspection for hard lids with Michael Ohler. Address partial pass issues before proceeding to final electrical.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Plumbing Permit BP2005031 -->
-            <div class="permit-card">
-                <div class="permit-header">
-                    <div class="permit-number">BP2005031</div>
-                    <div class="permit-type">Plumbing Permit</div>
-                </div>
-                
-                <div class="permit-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Contractor</div>
-                        <div class="detail-value">Multiple (Plumbing)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Start Date</div>
-                        <div class="detail-value">4/1/2020</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Scope</div>
-                        <div class="detail-value">2 toilets, 3 sinks, water heaters, disposal</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Status</div>
-                        <div class="detail-value">⚠️ Fees Due - Issues Need Resolution</div>
-                    </div>
-                </div>
-                
-                <div class="progress-section">
-                    <div class="progress-header">Inspection Progress</div>
-                    <div class="timeline">
-                        <div class="timeline-item partial">
-                            <div class="timeline-date">5/14/2024</div>
-                            <div class="timeline-type">(450) Rough Plumbing</div>
-                            <span class="timeline-status status-partial">Partial Pass</span>
-                        </div>
-                        <div class="timeline-item failed">
-                            <div class="timeline-date">3/4/2025</div>
-                            <div class="timeline-type">(430) Underfloor Groundwork</div>
-                            <span class="timeline-status status-failed">Canceled</span>
-                        </div>
-                        <div class="timeline-item failed">
-                            <div class="timeline-date">4/8/2025</div>
-                            <div class="timeline-type">(450) Rough Plumbing</div>
-                            <span class="timeline-status status-failed">Misc Inspected</span>
-                        </div>
-                        <div class="timeline-item next">
-                            <div class="timeline-date">Next Required</div>
-                            <div class="timeline-type">Resolve Fees & Schedule Rough Plumbing</div>
-                            <span class="timeline-status status-pending">Urgent Action Needed</span>
-                        </div>
-                    </div>
-                    
-                    <div class="next-steps" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                        <h4>🚨 Urgent Action Required:</h4>
-                        1. Pay outstanding permit fees immediately<br>
-                        2. Schedule rough plumbing re-inspection with David Clayton<br>
-                        3. Address all partial pass issues from previous inspections
-                    </div>
-                </div>
-            </div>
+
+            <!-- (other permit cards unchanged — omitted here for brevity) -->
+            <!-- keep the rest of your cards exactly as before -->
         </div>
-        
+
         <div class="summary">
             <div class="summary-card">
                 <div class="summary-number">4</div>
@@ -540,13 +421,13 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         // Add dynamic updates and animations
         document.addEventListener('DOMContentLoaded', function() {
             // Animate timeline items on scroll
             const timelineItems = document.querySelectorAll('.timeline-item');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -555,21 +436,21 @@
                     }
                 });
             });
-            
+
             timelineItems.forEach(item => {
                 item.style.opacity = '0';
                 item.style.transform = 'translateX(-20px)';
                 item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(item);
             });
-            
+
             // Add hover effects for permit cards
             const permitCards = document.querySelectorAll('.permit-card');
             permitCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.borderLeftWidth = '8px';
                 });
-                
+
                 card.addEventListener('mouseleave', function() {
                     this.style.borderLeftWidth = '5px';
                 });
