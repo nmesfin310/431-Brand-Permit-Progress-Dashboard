@@ -45,16 +45,22 @@
 }
 
 /* Bigger, clearer logo for SVG */
+/* --- Replace only the .logo rule with this --- */
 .logo {
-    width: 140px;      /* increase size for visibility — change as needed */
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 8px;
-    padding: 6px;                              /* small padding so transparent SVG stands out */
-    background: rgba(255,255,255,0.95);        /* subtle white bg so logo is clearly visible */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+  width: 160px;            /* larger for better visibility — change to 140/180 as you like */
+  height: auto;
+  flex-shrink: 0;
+
+  /* make SVG (or PNG) clearly visible on dark background */
+  background: #ffffff;     /* white background so transparent parts are visible */
+  padding: 8px;            /* space around the logo */
+  border-radius: 12px;     /* rounded corners */
+  border: 2px solid rgba(0, 249, 255, 0.12); /* subtle cyan outline */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  filter: contrast(1.05) saturate(1.05); /* small boost so SVG looks crisp */
+  display: block;
 }
+
 
 /* keep title stacked vertically */
 .header-text {
