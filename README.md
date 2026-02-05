@@ -1,209 +1,645 @@
-[readme_file.md](https://github.com/user-attachments/files/21702877/readme_file.md)
-# 🏗️ Glendale Permit Progress Dashboard
-
-## Blue Ocean Finance - Construction Permit Tracking System
-
-A modern, responsive dashboard for tracking construction permit progress at **431 N Brand Blvd, Glendale, CA 91203**. This dashboard provides real-time visibility into permit status, inspection progress, and next steps for the tenant improvement project.
-
-![Dashboard Preview](https://img.shields.io/badge/Status-Active-brightgreen) ![Permits](https://img.shields.io/badge/Permits-4-blue) ![Value](https://img.shields.io/badge/Project%20Value-$800K-orange)
-
-## 📋 Project Overview
-
-**Property**: 431 N Brand Blvd, Glendale, CA 91203  
-**Project Type**: Tenant Improvement for 4-Story Office + Underground Parking  
-**Total Value**: $800,000  
-**Parcel Number**: 5643003001  
-**Zoning**: DSP/GAT  
-
-## 🎯 Current Status Summary
-
-| Permit Type | Permit Number | Status | Next Action |
-|-------------|---------------|--------|-------------|
-| **Building** | BB2005025 | 🟡 Partial Pass | Drywall Re-inspection |
-| **Mechanical** | BM2005029 | 🟢 Ready | Final HVAC Inspection |
-| **Electrical** | BE1718496 | 🟡 Partial Pass | Hard Lids Re-inspection |
-| **Plumbing** | BP2005031 | 🔴 Fees Due | **URGENT: Pay Fees** |
-
-## ⚠️ Critical Actions Required
-
-### 🚨 **IMMEDIATE PRIORITY**
-- **Plumbing Permit BP2005031**: Outstanding fees must be paid immediately
-- **Contact**: David Clayton (Inspector)
-- **Impact**: Blocking all downstream inspections
-
-### 📅 **This Week**
-1. Schedule drywall re-inspection (BB2005025) with John Liddell
-2. Schedule hard lids re-inspection (BE1718496) with Michael Ohler
-3. Prepare for final HVAC inspection (BM2005029) with Steven Galipo
-
-## 🏢 Features
-
-- **Real-time Permit Status Tracking**
-- **Interactive Timeline Views**
-- **Inspector Contact Information**
-- **Next Steps Guidance**
-- **Blue Ocean Finance Branding**
-- **Responsive Design** (Mobile, Tablet, Desktop)
-- **Progress Indicators**
-- **Fee Status Monitoring**
-
-## 🎨 Design & Branding
-
-**Color Scheme**:
-- Primary: `#00f9ff` (Cyan)
-- Secondary: `#002133` (Navy Blue)
-- Background: `#ffffff` (White)
-
-**Typography**:
-- Primary: Montserrat
-- Secondary: Bell MT
-
-## 🛠️ Technology Stack
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Grid & Flexbox
-- **Vanilla JavaScript** - Interactive animations
-- **Google Fonts** - Montserrat typography
-- **Responsive Design** - Mobile-first approach
-
-## 📱 Browser Compatibility
-
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🚀 Quick Start
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/permit-dashboard.git
-   cd permit-dashboard
-   ```
-
-2. **Open in browser**:
-   ```bash
-   open index.html
-   # or simply double-click the file
-   ```
-
-3. **No build process required!** - Pure HTML/CSS/JS
-
-## 📁 File Structure
-
-```
-permit-dashboard/
-├── index.html              # Main dashboard (complete single file)
-├── README.md               # This file
-├── LICENSE                 # MIT License
-└── docs/
-    ├── screenshots/        # Dashboard images
-    └── permit-docs/        # Original permit PDFs
-```
-
-## 📊 Data Sources
-
-Current data is manually extracted from:
-- City of Glendale Building Permits
-- Inspection History Reports
-- Fee Status Documents
-- Contractor Information
-
-## 🔄 Updates & Maintenance
-
-**Last Updated**: August 2025  
-**Update Frequency**: Weekly or as inspections occur  
-**Maintained By**: Blue Ocean Finance Team  
-
-### Recent Changes:
-- ✅ Added plumbing permit BP2005031
-- ✅ Updated inspection status for all permits
-- ✅ Added fee due alerts
-- ✅ Implemented Blue Ocean Finance branding
-
-## 👥 Stakeholders
-
-**Property Owner**: Glendale Holdings LLC & Glendale Capital Group L  
-**Design Professional**: ARTO Kazarians  
-**Contractors**:
-- California Air Conditioning & Mechanical Inc (HVAC)
-- Cal Pro Electric Inc (Electrical)
-- Multiple contractors (Building & Plumbing)
-
-## 📞 Inspector Contacts
-
-| Trade | Inspector | Recent Inspection |
-|-------|-----------|------------------|
-| Building | John Liddell | 4/17/2025 |
-| HVAC | Steven Galipo | 1/21/2025 |
-| Electrical | Michael Ohler | 6/18/2025 |
-| Plumbing | David Clayton | 4/8/2025 |
-
-## 🔮 Future Enhancements
-
-- [ ] **API Integration** - Connect to City of Glendale permit system
-- [ ] **Email Notifications** - Automated alerts for inspection updates
-- [ ] **Mobile App** - PWA capabilities for field access
-- [ ] **Document Storage** - Upload and track permit documents
-- [ ] **Calendar Integration** - Sync inspection schedules
-- [ ] **Reporting** - Generate PDF progress reports
-- [ ] **Multi-project Support** - Track multiple properties
-
-## 📈 Performance Metrics
-
-- **Page Load**: < 2 seconds
-- **Responsive**: 100% mobile compatible
-- **Accessibility**: WCAG 2.1 AA compliant
-- **Browser Support**: 95%+ coverage
-
-## 🔒 Security & Privacy
-
-- **No sensitive data** stored in code
-- **Client-side only** - no server dependencies
-- **HTTPS recommended** for production deployment
-- **No tracking** or analytics by default
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit changes (`git commit -am 'Add new feature'`)
-4. Push to branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
-## 📞 Support
-
-**Blue Ocean Finance**  
-📧 Email: support@blueoceanfinance.com  
-🌐 Website: [www.blueoceanfinance.com](https://www.blueoceanfinance.com)  
-📱 Phone: Contact for support  
-
----
-
-## 🎯 Quick Actions
-
-### For Project Managers:
-1. Check **Summary Cards** for overall status
-2. Review **Critical Actions** section daily
-3. Contact inspectors using provided information
-
-### For Contractors:
-1. Check your permit's **Next Steps** section
-2. Note **Timeline** status for your trade
-3. Prepare for upcoming inspections
-
-### For Stakeholders:
-1. Monitor **Progress Timeline** for key milestones
-2. Review **Fee Status** for budget planning
-3. Track overall project completion percentage
-
----
-
-**📊 Dashboard URL**: [View Live Dashboard](https://yourusername.github.io/permit-dashboard/)
-
-*Last updated: August 9, 2025 | Version: 2.0 | Blue Ocean Finance © 2025*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glendale Permit Progress Dashboard - Blue Ocean Finance</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', 'Bell MT', serif;
+            background: linear-gradient(135deg, #002133 0%, #001122 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 249, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 249, 255, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #00f9ff;
+        }
+        
+        .header h1 {
+            color: #002133;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            color: #002133;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+        
+        .permits-grid {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .permit-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 249, 255, 0.15);
+            border-left: 5px solid #00f9ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .permit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 249, 255, 0.25);
+            border-left-width: 8px;
+        }
+        
+        .permit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .permit-number {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #002133;
+        }
+        
+        .permit-type {
+            background: linear-gradient(135deg, #00f9ff, #0088cc);
+            color: #002133;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-shadow: none;
+        }
+        
+        .permit-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #00f9ff;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #002133;
+            font-size: 0.9em;
+            margin-bottom: 3px;
+        }
+        
+        .detail-value {
+            color: #002133;
+            font-size: 1em;
+            opacity: 0.8;
+        }
+        
+        .progress-section {
+            margin-top: 20px;
+        }
+        
+        .progress-header {
+            font-weight: bold;
+            color: #002133;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e9ecef;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-left: 15px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #95a5a6;
+        }
+        
+        .timeline-item.passed::before {
+            background: #00f9ff;
+            box-shadow: 0 0 10px rgba(0, 249, 255, 0.5);
+        }
+        
+        .timeline-item.partial::before {
+            background: #f39c12;
+        }
+        
+        .timeline-item.failed::before {
+            background: #e74c3c;
+        }
+        
+        .timeline-item.next::before {
+            background: #00f9ff;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 249, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 249, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 249, 255, 0); }
+        }
+        
+        .timeline-date {
+            font-size: 0.85em;
+            color: #002133;
+            margin-bottom: 3px;
+            opacity: 0.7;
+        }
+        
+        .timeline-type {
+            font-weight: bold;
+            color: #002133;
+            margin-bottom: 2px;
+        }
+        
+        .timeline-status {
+            font-size: 0.9em;
+            padding: 2px 8px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        
+        .status-passed {
+            background: rgba(0, 249, 255, 0.2);
+            color: #002133;
+            font-weight: 600;
+        }
+        
+        .status-partial {
+            background: #ffeaa7;
+            color: #d63031;
+        }
+        
+        .status-failed {
+            background: #fab1a0;
+            color: #e17055;
+        }
+        
+        .status-pending {
+            background: rgba(0, 249, 255, 0.3);
+            color: #002133;
+            font-weight: 600;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, #00f9ff, #0088cc);
+            color: #002133;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .next-steps h4 {
+            margin-bottom: 8px;
+            font-size: 1em;
+            font-weight: 700;
+        }
+        
+        .expired {
+            border-left-color: #e74c3c;
+        }
+        
+        .expired .permit-type {
+            background: #e74c3c;
+        }
+        
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #00f9ff;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #002133, #001122);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(0, 249, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 249, 255, 0.2);
+        }
+        
+        .summary-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00f9ff;
+        }
+        
+        .summary-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🏗️ Glendale Permit Progress Dashboard</h1>
+            <p>431 N Brand Blvd, Glendale, CA 91203 - Tracking Status & Next Steps</p>
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 249, 255, 0.1); border-radius: 10px; border-left: 4px solid #00f9ff;">
+                <h3 style="color: #002133; margin-bottom: 15px; font-size: 1.2em;">📋 LOI Negotiation Progress - Seller Counter #3 (8/27/25) vs Counter #2 (7/30/25)</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                    <div style="background: #ffffff; padding: 15px; border-radius: 8px; border-left: 3px solid #00f9ff;">
+                        <div style="font-weight: bold; color: #002133; margin-bottom: 8px;">1. Closing Date Timeline</div>
+                        <div style="font-size: 0.95em; margin-bottom: 5px;"><strong>Previous:</strong> Seller: 60 days + 30 close vs Buyer: 90 days + 30 close</div>
+                        <div style="font-size: 0.95em; color: #e74c3c;"><strong>Current Counter:</strong> Seller maintains 60 days contingency + 30 days closing (no change)</div>
+                    </div>
+                    
+                    <div style="background: #ffffff; padding: 15px; border-radius: 8px; border-left: 3px solid #27ae60;">
+                        <div style="font-weight: bold; color: #002133; margin-bottom: 8px;">2. Release of Funds</div>
+                        <div style="font-size: 0.95em; margin-bottom: 5px;"><strong>Previous:</strong> Seller: $75K at escrow opening vs Buyer: $0</div>
+                        <div style="font-size: 0.95em; color: #27ae60;"><strong>Current Counter:</strong> $30K released after inspection (within 15 days) - <strong>Major concession!</strong></div>
+                    </div>
+                    
+                    <div style="background: #ffffff; padding: 15px; border-radius: 8px; border-left: 3px solid #f39c12;">
+                        <div style="font-weight: bold; color: #002133; margin-bottom: 8px;">3. Purchase Price</div>
+                        <div style="font-size: 0.95em; margin-bottom: 5px;"><strong>Previous:</strong> Seller: $12,895,000 vs Buyer: $12,500,000</div>
+                        <div style="font-size: 0.95em; color: #f39c12;"><strong>Current Counter:</strong> $12,700,000 (reduced by $195K) - <strong>Gap now $200K</strong></div>
+                    </div>
+                    
+                    <div style="background: #ffffff; padding: 15px; border-radius: 8px; border-left: 3px solid #27ae60;">
+                        <div style="font-weight: bold; color: #002133; margin-bottom: 8px;">4. Earnest Money Deposit</div>
+                        <div style="font-size: 0.95em; margin-bottom: 5px;"><strong>Previous:</strong> Seller: 4% vs Buyer: 3%</div>
+                        <div style="font-size: 0.95em; color: #27ae60;"><strong>Current Counter:</strong> 3% ($381,000) - <strong>Accepted buyer's terms!</strong></div>
+                    </div>
+                    
+                    <div style="background: #ffffff; padding: 15px; border-radius: 8px; border-left: 3px solid #e74c3c;">
+                        <div style="font-weight: bold; color: #002133; margin-bottom: 8px;">5. Closing Date Structure</div>
+                        <div style="font-size: 0.95em; margin-bottom: 5px;"><strong>Previous:</strong> Open-ended close vs Standard close + extension</div>
+                        <div style="font-size: 0.95em; color: #e74c3c;"><strong>Current Counter:</strong> 4 months + two 45-day extensions (15 days notice required)</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: rgba(231, 76, 60, 0.1); border-radius: 8px; border-left: 4px solid #e74c3c;">
+                    <div style="font-weight: bold; margin-bottom: 10px; color: #e74c3c; font-size: 1.1em;">🚨 NEW Terms Added in Counter #3 (Changes from Counter #2):</div>
+                    <div style="font-size: 0.95em; color: #002133; line-height: 1.6;">
+                        <strong>Section #7 - Purchase & Sale Agreement:</strong><br>
+                        • <strong>NEW:</strong> Buyer must provide "full and complete written list of closing conditions intended to address pre-closing construction"<br>
+                        • <strong>NEW:</strong> This list becomes the ONLY construction-related closing conditions Seller must comply with<br><br>
+                        
+                        <strong>Section #15 - Property Condition & Closing Conditions:</strong><br>
+                        • <strong>CHANGED:</strong> "Remaining Work" (Counter #2) → "Final Permit Signoffs" (Counter #3)<br>
+                        • <strong>REMOVED:</strong> Specific construction work requirements (elevator, plumbing, electrical, 8 bathrooms)<br>
+                        • <strong>NEW:</strong> Seller can extend closing "as long as required" for permit signoffs<br>
+                        • <strong>NEW:</strong> Extended Closing Date: 4 months + two 45-day extensions<br>
+                        • <strong>NEW:</strong> Outside Closing Date concept with full deposit refund rights<br>
+                        • <strong>CHANGED:</strong> Termination rights - both parties could terminate in #2, now structured differently<br><br>
+                        
+                        <strong>Section #13 - Closing:</strong><br>
+                        • <strong>REMOVED:</strong> Reference to "Escrow" in extension notice requirement (Counter #2 required notice to both Buyer and Escrow)
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; padding: 12px; background: linear-gradient(135deg, #00f9ff, #0088cc); border-radius: 8px; color: #002133;">
+                    <div style="font-weight: bold; margin-bottom: 5px;">🎯 Counter #3 Assessment:</div>
+                    <div style="font-size: 0.95em;">
+                        <strong>Major Wins:</strong> $195K price reduction, 3% earnest money accepted, $30K vs $75K release.<br>
+                        <strong>New Risk:</strong> Vague "permit signoffs" replace specific construction deliverables.<br>
+                        <strong>Critical Issue:</strong> Buyer must pre-define ALL construction closing conditions - limits flexibility.<br>
+                        <strong>Timeline Risk:</strong> Potentially 6+ months of extensions for undefined permit work.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="permits-grid">
+            <!-- Building Permit BB2005025 -->
+            <div class="permit-card">
+                <div class="permit-header">
+                    <div class="permit-number">BB2005025</div>
+                    <div class="permit-type">Building Permit</div>
+                </div>
+                
+                <div class="permit-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Contractor</div>
+                        <div class="detail-value">Multiple (Tenant Improvement)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Start Date</div>
+                        <div class="detail-value">4/1/2020</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Valuation</div>
+                        <div class="detail-value">$800,000</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Active - In Progress</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">Inspection Progress</div>
+                    <div class="timeline">
+                        <div class="timeline-item passed">
+                            <div class="timeline-date">4/17/2025</div>
+                            <div class="timeline-type">(130) Floor Nailing</div>
+                            <span class="timeline-status status-passed">Passed</span>
+                        </div>
+                        <div class="timeline-item partial">
+                            <div class="timeline-date">4/17/2025</div>
+                            <div class="timeline-type">(150) Drywall</div>
+                            <span class="timeline-status status-partial">Partial Pass</span>
+                        </div>
+                        <div class="timeline-item next">
+                            <div class="timeline-date">Next Required</div>
+                            <div class="timeline-type">Drywall Re-inspection</div>
+                            <span class="timeline-status status-pending">Pending Schedule</span>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h4>🎯 Next Steps:</h4>
+                        Schedule drywall re-inspection to address partial pass items. Contact inspector John Liddell for specific requirements.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mechanical Permit BM2005029 -->
+            <div class="permit-card">
+                <div class="permit-header">
+                    <div class="permit-number">BM2005029</div>
+                    <div class="permit-type">Mechanical Permit</div>
+                </div>
+                
+                <div class="permit-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Contractor</div>
+                        <div class="detail-value">California Air Conditioning & Mechanical Inc</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Start Date</div>
+                        <div class="detail-value">4/1/2020</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Scope</div>
+                        <div class="detail-value">3 air handlers, 3 motors, vent fans</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Active - Recent Pass</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">Inspection Progress</div>
+                    <div class="timeline">
+                        <div class="timeline-item passed">
+                            <div class="timeline-date">1/21/2025</div>
+                            <div class="timeline-type">(540) Rough HVAC</div>
+                            <span class="timeline-status status-passed">Passed</span>
+                        </div>
+                        <div class="timeline-item next">
+                            <div class="timeline-date">Next Required</div>
+                            <div class="timeline-type">Final HVAC Inspection</div>
+                            <span class="timeline-status status-pending">Ready to Schedule</span>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h4>🎯 Next Steps:</h4>
+                        Schedule final HVAC inspection with Steven Galipo. Ensure all equipment is installed and operational.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Electrical Permit BE1718496 -->
+            <div class="permit-card">
+                <div class="permit-header">
+                    <div class="permit-number">BE1718496</div>
+                    <div class="permit-type">Electrical Permit</div>
+                </div>
+                
+                <div class="permit-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Contractor</div>
+                        <div class="detail-value">Cal Pro Electric Inc</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Start Date</div>
+                        <div class="detail-value">8/1/2017</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Scope</div>
+                        <div class="detail-value">129 outlets, 54 circuits, 600V+ service</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Active - Recent Progress</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">Inspection Progress</div>
+                    <div class="timeline">
+                        <div class="timeline-item passed">
+                            <div class="timeline-date">8/23/2024</div>
+                            <div class="timeline-type">(340) Rough Electrical</div>
+                            <span class="timeline-status status-passed">Passed</span>
+                        </div>
+                        <div class="timeline-item partial">
+                            <div class="timeline-date">6/18/2025</div>
+                            <div class="timeline-type">(355) Rough Electric/Hard Lids</div>
+                            <span class="timeline-status status-partial">Partial Pass</span>
+                        </div>
+                        <div class="timeline-item next">
+                            <div class="timeline-date">Next Required</div>
+                            <div class="timeline-type">Hard Lids Re-inspection</div>
+                            <span class="timeline-status status-pending">Pending Schedule</span>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h4>🎯 Next Steps:</h4>
+                        Schedule re-inspection for hard lids with Michael Ohler. Address partial pass issues before proceeding to final electrical.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Plumbing Permit BP2005031 -->
+            <div class="permit-card">
+                <div class="permit-header">
+                    <div class="permit-number">BP2005031</div>
+                    <div class="permit-type">Plumbing Permit</div>
+                </div>
+                
+                <div class="permit-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Contractor</div>
+                        <div class="detail-value">Multiple (Plumbing)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Start Date</div>
+                        <div class="detail-value">4/1/2020</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Scope</div>
+                        <div class="detail-value">2 toilets, 3 sinks, water heaters, disposal</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">⚠️ Fees Due - Issues Need Resolution</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">Inspection Progress</div>
+                    <div class="timeline">
+                        <div class="timeline-item partial">
+                            <div class="timeline-date">5/14/2024</div>
+                            <div class="timeline-type">(450) Rough Plumbing</div>
+                            <span class="timeline-status status-partial">Partial Pass</span>
+                        </div>
+                        <div class="timeline-item failed">
+                            <div class="timeline-date">3/4/2025</div>
+                            <div class="timeline-type">(430) Underfloor Groundwork</div>
+                            <span class="timeline-status status-failed">Canceled</span>
+                        </div>
+                        <div class="timeline-item failed">
+                            <div class="timeline-date">4/8/2025</div>
+                            <div class="timeline-type">(450) Rough Plumbing</div>
+                            <span class="timeline-status status-failed">Misc Inspected</span>
+                        </div>
+                        <div class="timeline-item next">
+                            <div class="timeline-date">Next Required</div>
+                            <div class="timeline-type">Resolve Fees & Schedule Rough Plumbing</div>
+                            <span class="timeline-status status-pending">Urgent Action Needed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: white;">
+                        <h4>🚨 Urgent Action Required:</h4>
+                        1. Pay outstanding permit fees immediately<br>
+                        2. Schedule rough plumbing re-inspection with David Clayton<br>
+                        3. Address all partial pass issues from previous inspections
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <div class="summary-number">5</div>
+                <div class="summary-label">Total Permits</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-number">10</div>
+                <div class="summary-label">Recent Inspections</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-number">5</div>
+                <div class="summary-label">Pending Re-inspections</div>
+            </div>
+            <div class="summary-card" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                <div class="summary-number">2</div>
+                <div class="summary-label">⚠️ Outstanding Balances</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Dashboard JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate timeline items on scroll
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            });
+            
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+            
+            // Add hover effects for permit cards
+            const permitCards = document.querySelectorAll('.permit-card');
+            permitCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.borderLeftWidth = '8px';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.borderLeftWidth = '5px';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
